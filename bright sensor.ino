@@ -1,3 +1,5 @@
+//Código para verificar funcionamento do Sensor LDR - Dependendo da luminosidade do ambiente, o sensor envia valores que podem acender ou apagar o LED
+
 const int isr = A1;
 const int led = 11;
 
