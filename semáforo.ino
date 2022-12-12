@@ -1,3 +1,7 @@
+/* Código que simula semáforo com botão 'pedestre'
+  Verificar simulação do circuito no tinkercad: 
+  https://www.tinkercad.com/things/gyh82XTv5e8-funky-juttuli-gogo/editel?sharecode=pfV9_uwnwnR31gQLtR6Q_juMGSzuh_aWIOGZ1fnNz8Q */
+
 const int vermelho = 13;
 const int amarelo = 12;
 const int verde = 11;
