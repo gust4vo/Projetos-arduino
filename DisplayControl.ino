@@ -1,3 +1,5 @@
+// Código para acompanhar o valor da tensão variável controlada por um potenciômetro através de um display de 7 segmentos
+
 const int sega = 4;
 const int segb = 5;
 const int segc = 6;
