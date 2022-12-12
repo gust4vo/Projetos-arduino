@@ -1,19 +1,36 @@
-const int isr = A1;
-const int led = 11;
+const int vermelho = 13;
+const int amarelo = 12;
+const int verde = 11;
+const int botao = 7;
 
-float isrValor;
+void geraAtraso(int N) {
+  while (N >= 0) {
+    N--;
+    for (int k=1; k<30000 ; k++ );
+  }}
 
-void setup(){
-  pinMode(led, OUTPUT);
-  Serial.begin(9600);
+void setup() {
+  pinMode(vermelho, OUTPUT);
+  pinMode(amarelo, OUTPUT);
+  pinMode(verde, OUTPUT);
+  pinMode(botao, INPUT_PULLUP);
 }
 
-void loop(){
-  isrValor = analogRead(isr) * (5.0/1024);
-  Serial.println(isrValor);
-  if(isrValor > 3.0){
-    digitalWrite(led, HIGH);
-  } else{
-    digitalWrite(led, LOW);
+void loop() {
+  int cont = 0;
+  while(digitalRead(botao) == HIGH){
+    digitalWrite(verde, HIGH);
+    geraAtraso(1);
+    cont++;
+    if(cont == 20)
+    break;
   }
+
+  digitalWrite(verde, LOW);
+  digitalWrite(amarelo, HIGH);
+  geraAtraso(10);
+  digitalWrite(amarelo, LOW);
+  digitalWrite(vermelho, HIGH);
+  geraAtraso(35);
+  digitalWrite(vermelho, LOW);
 }
